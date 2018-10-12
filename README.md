@@ -1,6 +1,6 @@
 # questionnairProject
 it is a simply questionnair project
 
-#usage
-npm install
+# usage
+npm install \n
 npm start

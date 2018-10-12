@@ -2,5 +2,9 @@
 it is a simply questionnair project
 
 # usage
->npm install 
->npm start
+## Installation dependency
+> npm install
+## run 
+> npm start
+## bale
+> npm run build

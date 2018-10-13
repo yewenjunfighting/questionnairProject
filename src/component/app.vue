@@ -21,6 +21,7 @@
        <div class="bt">
            <button @click="up">上一页</button>
            <button :disabled="it.length < 10" @click="st">重置</button>
+           <button :disabled="it.length < 10" @click="submit">提交</button>
        </div>
     </div>
 </div>
@@ -104,6 +105,18 @@
             setIntroduce: function(value){
                 this.it = value;
                 console.log(this.it);
+            },
+            submit: function(){
+                let inf = {
+                    gender: this.gd,
+                    hobby: this.hb,
+                    introduce: this.it
+                };
+                fetch('result.html')
+                .then(function(response){
+                        if(!response.ok) return new Error(response);
+                        else window.location.href = response.url; //实现页面的跳转
+                    })
             }
         }
     }

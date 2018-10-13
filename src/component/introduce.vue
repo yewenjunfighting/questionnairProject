@@ -13,7 +13,6 @@
         methods: {
             getIntr: function(){
                 let area = event.target;
-                console.log(area.getAttribute('value')=== area.value);
                 if(area.value){
                     this.$emit('getIntroduce', area.value);
                 }

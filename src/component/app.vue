@@ -95,10 +95,11 @@
                     //取消选择了就把数组里的该项删掉
                     //用filter过滤一遍
                     this.hb = this.hb.filter(function(item){
-                        item != value;
+                        if(item === value) return false;
+                        else return true;
                     });
                 }
-                console.log(this.hb);
+                console.log(this.hb, this.hb.length);
             },
             setIntroduce: function(value){
                 this.it = value;
@@ -116,14 +117,13 @@
         background-color: #fff;
     }
 
-    button:hover{
+    button {
       cursor: pointer;
     }
 
     [disabled]{
-        cursor: not-allowed;
+        cursor: default;
     }
-
     .bt{
         margin-top: 20px;
     }
